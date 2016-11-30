@@ -1,49 +1,56 @@
 body {
   font-size: 16px;
-  color: #fff;
-  background-color: #233a77;
+  color:  #FFF;
+  background-color: #483C32;
   font-family: 'Oxygen', sans-serif;
 }
 
 /** HEADER **/
 #header-nav {
-  background-color: #EEEEEE;
+  background-color: #046;
   border-radius: 0;
   border: 0;
 }
 
+#img-car{
+	box-shadow: 4px 10px 4px #555555;
+	border: 1px solid #EEE;
+}
+/*
 #logo-img {
   background: url('/images/logo-image.png') no-repeat;
-  width: 340px;
+  width: 330px;
+
   height: 150px;
   margin: 10px 15px 10px 0;
 }
+*/
 
 .navbar-brand {
   padding-top: 25px;
 }
 
-.navbar-brand h1 { /* Restaurant name */
+.navbar-brand h1 { /* Brand name */
   font-family: 'Lora', serif;
-  color: #557c3e;
-  font-size: 1.5em;
+  color: #AFF;
+  font-size: 2.1em;
   text-transform: uppercase;
   font-weight: bold;
   text-shadow: 1px 1px 1px #222;
-  margin-top: 0;
+  margin-top: -15px;
   margin-bottom: 0;
   line-height: .75;
 }
 .navbar-brand a:hover, .navbar-brand a:focus {
   text-decoration: none;
 }
-.navbar-brand p { /* Kosher cert */
-  color: #000;
+.navbar-brand p { /* Solution at your Doorstep */
+  color: #AFF;
   text-transform: uppercase;
   font-size: .7em;
   margin-top: 15px;
 }
-.navbar-brand p span { /* Star-K */
+.navbar-brand p span { /* Tiny home */
   vertical-align: middle;
 }
 
@@ -55,25 +62,38 @@ body {
   text-align: center;
 }
 #nav-list a:hover {
-  background: #E7E7E7;
+  border :1px solid grey;
+  background-color :#7FF;
+  padding-bottom: 5px;
+  color :#000;
+
+
 }
 #nav-list a span {
-  font-size: 1.8em;
+  font-size: 1em;
 }
 
 #phone {
-  margin-top: 5px;
+  margin-top: 0px;
+  font-size :2.0vw;
+
 }
 #phone a { /* Phone number */
   text-align: right;
-  padding-bottom: 0;
+  padding :6px;
+  color: #AFF;
 }
 #phone div { /* We Deliver */
-  color: #557c3e;
+  color: #AFF;
   text-align: right;
   padding-right: 15px;
 }
 
+#signup{
+	margin-top:10px;
+	  color: #AFF;
+	  font-size:1.6vw;
+}
 .navbar-header button.navbar-toggle, .navbar-header .icon-bar {
   border: 1px solid #61122f;
 }
@@ -83,28 +103,115 @@ body {
 }
 /* END HEADER */
 
+/*JUMBOTRON*/
+
+#main-navbar{
+	margin-top:-18px;
+	margin-bottom: 10px;
+	border: 2px;
+	background-color: #ECECEA;
+	box-shadow: 2px 2px 2px grey;
+
+}
+
 /********** Large devices only **********/
+
 @media (min-width: 1200px) {
 #logo-img {
 	 background: url('../images/logo-image.png') no-repeat;
+	 height :70px;
+	 width : auto;
+}
+
+#carousel-container{
+	
+	margin: 15px -320px 15px auto;
+	
 }
 
 }
 
 /********** Medium devices only **********/
+
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* Header */
+  
   #logo-img {
     background: url('../images/logo-image-md.png') no-repeat;
     width: 200px;
-    height: 100px;
-    margin: 5px 5px 5px 0;
+    height: 70px;
+    margin: 10px 5px 5px 0;
   }
   /* End Header */
+	
+#phone {
+  margin-top: 5px;
+  margin-right: 50px;
+  
+}
+#phone a { /* Phone number */
+  text-align: right;
+  padding-bottom: 0;
+	font-size: 2.2vw;
+}
+#phone div { /* Call us */
+  color: #7FF;
+  text-align: right;
+  padding-right: 15px;
+  font-size: 2.5vw;
+}
+
+
+
 }
 
 /********** Small devices only **********/
 @media (min-width: 768px) and (max-width: 991px) {
+
+#phone {
+ 
+  margin: 5px -50px 0px 0px;
+  
+}
+#phone a { /* Phone number */
+  text-align: right;
+  padding-bottom: 0;
+  font-size: 2.5vw;
+  margin: 5px 0px 0px 0px;
+
+  
+}
+#phone div { /* We Deliver */
+ 
+  text-align: right;
+  font-size : 1.2vw;
+ margin: 5px 50px 0px 0px;
+ font-size: 2.5vw;
+}
+
+.navbar-brand h1 { /* RHSF Solutions*/
+    padding-top: 15px;
+    font-size: 2.2vw; /* 1vw = 1% of viewport width */
+
+
+  }
+  .navbar-brand p { /* Solution at your doorstep */
+    font-size: .7em;
+    margin-top: 15px;
+  }
+  .navbar-brand p img { /* Tiny homme */
+    height: auto;
+  }
+
+  #collapsable-nav a { /* Collapsed nav menu text */
+    font-size: 1.2em;
+  }
+  #collapsable-nav a span { /* Collapsed nav menu glyph */
+    font-size: 1em;
+    margin-right: 15px;
+
+
+  }
+
 
 }
 
@@ -113,18 +220,18 @@ body {
   /* Header */
   .navbar-brand {
     padding-top: 10px;
-    height: 80px;
+    height: 70px;
   }
-  .navbar-brand h1 { /* Restaurant name */
+  .navbar-brand h1 { /* RHSF Solutions*/
     padding-top: 10px;
     font-size: 5vw; /* 1vw = 1% of viewport width */
   }
-  .navbar-brand p { /* Kosher cert */
+  .navbar-brand p { /* Solution at your doorstep */
     font-size: .6em;
-    margin-top: 12px;
+    margin-top: 15px;
   }
-  .navbar-brand p img { /* Star-K */
-    height: 20px;
+  .navbar-brand p img { /* Tiny homme */
+    height: auto;
   }
 
   #collapsable-nav a { /* Collapsed nav menu text */
@@ -132,18 +239,26 @@ body {
   }
   #collapsable-nav a span { /* Collapsed nav menu glyph */
     font-size: 1em;
-    margin-right: 5px;
+    margin-right: 15px;
+
+
   }
 
+
+
+
+ 	
   #call-btn > a {
     font-size: 1.5em;
     display: block;
     margin: 0 20px;
     padding: 10px;
-    border: 2px solid #fff;
-    background-color: #f6b319;
-    color: #951c49;
+    border: 2px solid grey;
+    background-color: #D9853B;
+    color: #AFF;
+    margin-bottom: 23px;
   }
+
   #xs-deliver {
     margin-top: 5px;
     font-size: .7em;
