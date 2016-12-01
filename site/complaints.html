@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Complaints</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href ="css/bootstrap-theme-min.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+
+<style>
+	#complaint-heading{
+
+
+	color:#D9853B;    
+	}
+	
+	#complaint-cont{
+		position: relative;
+
+		border: 2px solid black;
+		padding-top:10px;
+		padding-bottom: 10px;
+		width: 600px;
+		margin:0 auto;
+		box-shadow: 4px 6px 4px #555555;
+	}
+	label {
+	   width: 100px;
+	   display: inline-block;
+	   text-align: right;
+	}
+	#textarea{
+	height:200px;
+	width:400px;
+	}
+	
+</style>
+
+</head>
+<body>
+
+<div id="complaint-cont" class= "container" align="center">
+	<h1 id="complaint-heading">Complaints</h1>
+
+	<form action="" id = 'postForm' method="POST">
+		<span id="feedback-msg">RHSF would like to know of your experience. We prefer discretion to make this brand even better for everyone. For any service issues, mention in complaint section below. For complaint against worker, mention and state reason for the inconvenience.</span>
+<p></p>
+<form action="index.html">
+
+<p>
+<label for="name">Name</label>
+<input name="name" placeholder="Full Name" required/>
+</p>
+<p>
+<label for="email">Email</label>
+<input name="email" placeholder="Enter Email-ID" type="email" required />
+</p>
+<p>
+<label>Worker ID</label>
+<select name="area" >
+
+          <option value="">ID of concerned worker</option>
+          			  <option value=""></option>
+                      <option value="">#</option>
+                      <option value="">##</option>
+                      <option value="">###</option>
+ </select>
+</p>
+<p>
+<label id="label-fb" for="feedback">Complaint</label>
+<textarea id="textarea" name="textarea" > </textarea>
+</p>
+
+
+<p align="center"><input type="submit" id="submit-button" class="btn btn-info order-btn" value="Submit"></p>
+
+	</form>
+
+</div>
+
+</body>
+</html>

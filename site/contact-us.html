@@ -9,6 +9,12 @@
     <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
 <style>
+   #contactus-heading{
+
+
+	color:#D9853B;    
+	}
+
 	#contact-cont{
 		position: relative;
 
@@ -28,6 +34,11 @@
 	height:200px;
 	width:400px;
 	}
+	#fb-label{
+	 padding-left: 100px;
+
+	}
+
 
 </style>
 
@@ -35,27 +46,39 @@
 <body>
  <div class="container" id="contact-cont" align="center">
 
-<h1 align="center" id="login-heading">Contact Us!</h1>
+<h1 align="center" id="contactus-heading">Contact Us!</h1>
 <span id="feedback-msg">RHSF would like to know of your experience. We prefer discretion to make this brand even better for everyone.</span>
 <p></p>
-<form action="index.html">
+<form action="" id = 'postForm' method="POST">
 
 <p>
 <label for="name">Name</label>
-<input id="name" name="name"/>
+<input id="name" name="name" placeholder="Enter Name" />
 </p>
 <p>
-<label for="email">Email</label>
-<input id="email" name="email"/>
+<label for="email" >Email</label>
+<input id="email" name="email" placeholder="Enter Email"/>
 </p>
 
 <p>
-<label for="feedback">Feedback</label>
+<label>Worker ID</label>
+<select name="area" >
+
+          <option value="">UP Worker rating!</option>
+          			  <option value=""></option>
+                      <option value="">#</option>
+                      <option value="">##</option>
+                      <option value="">###</option>
+ </select>
+</p>
+
+<p>
+<label for="feedback" class="row pull-left" id="fb-label">Feedback</label>
 <textarea id="textarea" name="textarea"> </textarea>
 </p>
 
 
-<p align="center"><button id="Submit" value="Submit" >Submit</button></p>
+<p align="center"><input type="submit" id="submit-button" class="btn btn-info order-btn" value="Submit"></p>
 
 </form>
 </div>
