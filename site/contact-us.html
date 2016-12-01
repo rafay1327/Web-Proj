@@ -8,13 +8,38 @@
 
     <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+<style>
+	#contact-cont{
+		position: relative;
+
+		border: 2px solid black;
+		padding-top:10px;
+		padding-bottom: 10px;
+		width: 800px;
+		margin:0 auto;
+		box-shadow: 4px 6px 4px #555555;
+	}
+	label {
+	   width: 100px;
+	   display: inline-block;
+	   text-align: right;
+	}
+	#textarea{
+	height:200px;
+	width:400px;
+	}
+
+</style>
 
 </head>
 <body>
- <div class="container" id="contactus-cont" align="center">
+ <div class="container" id="contact-cont" align="center">
 
 <h1 align="center" id="login-heading">Contact Us!</h1>
+<span id="feedback-msg">RHSF would like to know of your experience. We prefer discretion to make this brand even better for everyone.</span>
+<p></p>
 <form action="index.html">
+
 <p>
 <label for="name">Name</label>
 <input id="name" name="name"/>
@@ -26,7 +51,7 @@
 
 <p>
 <label for="feedback">Feedback</label>
-<textarea id="email" name="textarea"> </textarea>
+<textarea id="textarea" name="textarea"> </textarea>
 </p>
 
 

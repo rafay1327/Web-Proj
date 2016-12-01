@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+	<title> Book Painter</title>
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href ="css/bootstrap-theme-min.css">
@@ -12,42 +9,23 @@
 
     <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
-
-	<title>Create an Account</title>
-
-<style type="text/css">
-	#login-heading{
-
-
-	color:#D9853B;    
-	}
-	
-	#login-cont{
-		position: relative;
-
-		border: 2px solid black;
-		padding-top:10px;
-		padding-bottom: 10px;
-		width: 400px;
-		margin:0 auto;
-		box-shadow: 4px 6px 4px #555555;
-	}
-	label {
-	   width: 100px;
-	   display: inline-block;
-	   text-align: right;
-	}
-
-</style>
+</head>
 <body>
-
-<div class="container" id="login-cont" align="center">
-
-
-<div>
-<h1 align="center" id="login-heading">Create an Account</h1>
-<form action="index.html" id = 'postForm' method="POST">
-<input type="hidden" name="cat" value="repairman">
+<div class="inner-back">
+  <div class="container contant">
+        <div class="col-sm-8 col-xs-12 " >
+      <div class="col-sm-3 col-xs-12">
+        
+      </div>
+      <div class="col-sm-8 col-xs-12 space1">
+        <h3>PAINTER</h3>
+        <p>Book painters for renovation tasks and give your home/office a new look. Our painters are also background verified, at your doorstep within 6-8 hours of booking and have a know-how of latest trends (theme walls, wallpapers, texture painting etc).
+</p>
+      </div>
+    </div>
+        <div class="col-sm-4 col-xs-12">
+      <form action="" id = 'postForm' method="POST">
+        <input type="hidden" name="cat" value="painter">
                 <input type="text" class="form-control in1" placeholder="Full Name" name="fullname" required>
 		 <label id="fullname_error" style="display:none; color:#f30;" class="order-lable">Name is required</label>
         <input type="email" class="form-control in1" placeholder="Email" name="email" required>
@@ -56,29 +34,40 @@
 		 <label id="phone_error" style="display:none; color:#f30;" class="order-lable">Check your phone number format (03XXXXXXXXX) </label>
         <input type="tel" class="form-control in1" placeholder="Alternate Phone (03XXXXXXXXX or 0213XXXXXXX)" name="altphone" >
  <label id="alt_phone_error" style="display:none; color:#f30;" class="order-lable">Check your number format (03XXXXXXXXX or 0213XXXXXXX) </label>
-
-<select id="order-area-select" name="area" onChange="getSubarea(this.value)" required="" class="form-control in1">
+        <input type="text" class="form-control in1 datepicker" placeholder="Date" name="preferred_date" required>
+		 <label id="preferred_date_error" style="display:none; color:#f30;" class="order-lable">Preferred date is required</label>
+        <select id="Preferred_Time" name="Preferred_Time" class="form-control in1" required>
+          <option id="time-11-01" value="11:00 am-01:00 pm">11:00-01:00 pm</option>
+        <option id="time-01-03" value="01:00 pm-03:00 pm">01:00-03:00 pm</option>
+        <option id="time-03-05" value="03:00 pm-05:00 pm">03:00-05:00 pm</option>
+        <option id="time-05-07" value="05:00 pm-07:00 pm">05:00-07:00 pm</option>
+        </select>
+		 <label id="Preferred_Time_error" style="display:none; color:#f30;" class="order-lable">Preferred time is required</label>
+       		<select id="order-subcategory-select" name="subcategories[]" multiple required="" class="form-control in1">
+          <option value="">Choose Sub Categories</option>
+                      <option value="181">Compressor Machine/S</option><option value="175">Distemper On Raw Wal</option><option value="169">Distemper Paint</option><option value="20">From scratch</option><option value="174">Graphic with materia</option><option value="180">Graphic with materia</option><option value="182">Mural/Graffiti Work </option><option value="177">Oil Matt On Raw Wall</option><option value="171">Oil Paint</option><option value="179">Texture On Raw Walls</option><option value="173">Texture Paint</option><option value="178">Wall Paper On Raw Wa</option><option value="172">Wall Paper Pasting</option><option value="21">Walls only</option><option value="170">Water Matt</option><option value="176">Water Matt On Raw Wa</option><option value="other">Other</option>			        </select>
+		 <label id="subcategory_error" style="display:none; color:#f30;" class="order-lable">Please select at least one subcategory</label>
+         <select id="order-area-select" name="area" onChange="getSubarea(this.value)" required="" class="form-control in1">
           <option value="">Choose Area</option>
                       <option value="4">Askari</option><option value="12">Bihar Muslim Cooperative Housing Society</option><option value="144">Bufferzone</option><option value="14">Cantonment</option><option value="10">Clifton</option><option value="20">Cuchti Memon Cooperative Housing Society</option><option value="28">Defence Housing Authority</option><option value="24">Defence View</option><option value="26">Dehli Mercentile Cooperative Housing Society</option><option value="22">Delhi Merchantile Cooperative Housing Society</option><option value="34">Falcon Complex Faisal off Shaheed e Millat Road</option><option value="36">Farhan Cooperative Housing Society</option><option value="119">Federal B Area</option><option value="40">Garden</option><option value="44">Gulistan e Johar</option><option value="112">Gulshan e Iqbal</option><option value="46">Gulshan Iqbal</option><option value="122">Gulzar e Hijri</option><option value="124">II Chundrigarh</option><option value="275">Jamshaid road</option><option value="58">Karachi Administration Employees Housing Society</option><option value="67">Karachi Cantonment</option><option value="73">Karachi Development Authority</option><option value="69">Karachi Memon Cooperative Housing Society</option><option value="173">Karimabad</option><option value="126">Kharadar</option><option value="128">Korangi</option><option value="130">Lalazar</option><option value="132">Landhi</option><option value="135">MA Jinnah</option><option value="142">Malir  </option><option value="137">Malir Cantt</option><option value="139">Manzoor Colony</option><option value="146">MT Khan Road</option><option value="1">Muhammad Ali Housing Society</option><option value="79">Nazimabad</option><option value="148">New Karachi</option><option value="81">NORE</option><option value="153">North Karachi</option><option value="151">North Nazimabad</option><option value="8">Pakistan Employee Cooperative Housing Society</option><option value="85">PECHS</option><option value="155">PIB Colony</option><option value="90">PIDC</option><option value="92">PNS Shifa Hospital</option><option value="158">Saadi Town</option><option value="56">Saddar</option><option value="160">Safoora Goth</option><option value="162">Shah Faisal</option><option value="117">Shah Faisal Town</option><option value="98">Shaheed e Millat</option><option value="100">Shahrah e Faisal</option><option value="109">Sindhi Muslim Cooperative Housing Society</option><option value="164">SITE</option><option value="166">Soldier Bazar</option><option value="168">West Wharf</option>         </select>
-
-
-<p></p>
-<p align="center"><button id="Submit" value="Submit">Submit</button></p>
-
-</form>
+		 <label id="area_error" style="display:none; color:#f30;" class="order-lable">Please select at least one area</label>
+        <div id="loading">
+        
+	</div>
+         <select class='form-control in1' id="order-subarea-select" name="subarea" >
+        <option value="">Choose Subarea</option>
+    	</select>
+        <textarea placeholder="Address" rows="4" class="form-control in1" id="" name="address"></textarea> 
+		<textarea placeholder="Briefly describe your order" rows="4" class="form-control in1" id="additional_notes" name="additional_notes"></textarea>
+        
+        <label id="Preferred_Time_Message" style="display:none; color:#f30;" class="order-lable">Sorry - same day orders cannot be placed after 4pm. Please select the next available date from calendar</label>
+        <label id="EidMessage" style="display:none; color:#f30;" class="clearfix">Eid Vacations! Please select another date for booking.</label><br />
+		 
+        <input type="submit" id="submit-button" class="btn btn-info order-btn" value="Submit">
+      </form>
+    </div>
+  </div>
 </div>
-</div>
 
-
-
-
-
-<!-- Calling jquery first -->
-<script language="JavaScript" type="text/javascript" src="scripts/bootstrap.min.js"></script>
-  <!-- jQuery (Bootstrap JS plugins depend on it) -->
-  <script src="js/jquery-3.1.1.min.js"></script> 
-  <script src="js/bootstrap.js"></script>
- 
-</script>
 </body>
 </html>

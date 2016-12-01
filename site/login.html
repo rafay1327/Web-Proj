@@ -23,15 +23,19 @@
 	color:#D9853B;    
 	}
 	
-	#login-cont{
+		#login-cont{
+			
+		position: relative;
 		border: 2px solid black;
-		margin-top:50px;
-		width: 800px;
+		padding-top:10px;
+		padding-bottom: 10px;
+		width: 350px;
 		margin:0 auto;
-
+		box-shadow: 4px 6px 4px #555555;
 	}
+
 	label {
-	   width: 200px;
+	   
 	   display: inline-block;
 	   text-align: right;
 	}
@@ -42,15 +46,14 @@
 <div class="container" id="login-cont" align="center">
 
 <h1 align="center" id="login-heading">User Login</h1>
-<form action="index.html">
-<p>
-<label for="user-id">User-ID</label>
-<input id="user-id" name="user-id" placeholder="User ID" required/>
-</p>
-<p>
-<label for="password">Password</label>
-<input id="password" name="password" type="password" placeholder="Password" required/>
-</p>
+<form action="index.html" id = 'postForm' method="POST">
+
+  <input type="text" class="form-control in1" placeholder="Full Name" name="fullname" required>
+		 <label id="fullname_error" style="display:none; color:#f30;" class="order-lable">Name is required</label>
+         <input type="email" class="form-control in1" placeholder="Email" name="email" required>
+		 <label id="email_error" style="display:none; color:#f30;" class="order-lable">Email is required</label>
+       
+
 <p align="center"><button id="Submit" value="Submit" >Submit</button></p>
 
 </form>
